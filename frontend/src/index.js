@@ -2,11 +2,33 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {Provider} from 'react-redux';
+import {configureStore,combineReducers} from '@reduxjs/toolkit'
+
 // How to use WebVitals?
 import reportWebVitals from './reportWebVitals';
 
+// Reducers
+import authReducer from './controllers/redux/authSlice'
+import bugReducer from './controllers/redux/bugSlice'
+import userReducer from './controllers/redux/userSlice'
+
+// Redux configure
+const reducer = combineReducers({
+  auth:authReducer,
+  bug:bugReducer,
+  user:userReducer,
+})
+
+const store = configureStore({
+  reducer
+})
+
 ReactDOM.render(
-    <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>
+  ,
   document.getElementById('root')
 );
 

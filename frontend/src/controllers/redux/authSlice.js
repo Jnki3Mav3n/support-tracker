@@ -7,14 +7,21 @@ const slice = createSlice({
         LoggedIn:false,
     },
     reducers:{
-        signIn:(state, action)=>{
-
+        signIn:(state,action)=>{
+            const {name,password} = action.payload;
+            state.LoggedIn = true;
+            state.admin = true;
         },
         signOut:(state)=>{
-
+            state.signOut = false;
+            state.admin = false;
         },
-        createUser:(state,action)=>{
-            
+        addUser:(state,action)=>{
+
         }
     }
 })
+
+export default slice.reducer;
+
+export const {signIn,signOut,addUser} = slice.actions;
