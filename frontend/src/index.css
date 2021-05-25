@@ -1,9 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
 #root {
   grid-template-columns: 20% 80%;
   display: grid;
   --prim-color: #264e70;
   color: white;
-  margin: -8px;
 }
 
 /*
