@@ -1,11 +1,12 @@
-html {
-  margin: 0;
-  padding: 0;
-  margin-left: 20vw;
+#root {
+  grid-template-columns: 20% 80%;
+  display: grid;
   --prim-color: #264e70;
   color: white;
+  margin: -8px;
 }
 
+/*
 body {
   margin: 0;
   padding: 0;
@@ -17,6 +18,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+*/
 
 button {
   background: #ef6c57;
